@@ -47,11 +47,11 @@
     <!-- air margin around calorimeter -->
     <constant name="BarCryoECal_rmin" value="ECalBarrel_inner_radius+AirMarginThickness"/>
     <constant name="BarCryoECal_rmax" value="ECalBarrel_outer_radius-AirMarginThickness"/>
-    <constant name="BarCryoECal_dz" value="ECalBarrel_half_length * 2"/>
+    <constant name="BarCryoECal_dz" value="ECalBarrel_half_length"/>
     <!-- calorimeter active volume -->
     <constant name="EMBarrel_rmin" value="BarCryoECal_rmin+CryoBarrelFront+LArBathThicknessFront"/>
     <constant name="EMBarrel_rmax" value="BarCryoECal_rmax-CryoBarrelBack-LArBathThicknessBack"/>
-    <constant name="EMBarrel_dz" value="(ECalBarrel_half_length*2)-CryoBarrelSide"/>
+    <constant name="EMBarrel_dz" value="(ECalBarrel_half_length)-CryoBarrelSide"/>
     <!-- thickness of active volume between two absorber plates at EMBarrel_rmin, measuring perpendicular to the readout plate -->
     <constant name="LAr_thickness" value="LArGapThickness"/>
     <!-- passive layer consists of lead in the middle and steel on the outside, glued -->
