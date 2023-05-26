@@ -17,7 +17,7 @@
     </includes>
 
     <define>
-        <constant name="world_side" value="6100*mm"/>
+        <constant name="world_side" value="7000*mm"/>
         <constant name="world_x" value="world_side"/>
         <constant name="world_y" value="world_side"/>
         <constant name="world_z" value="world_side"/>
@@ -125,16 +125,17 @@
         <constant name="OuterTracker_outer_radius" value="2145*mm"/>  <!-- to avoid overlap with CaloFace, but it has to be large enough to accommodate OT-->
         <constant name="OuterTracker_half_length" value="2300*mm"/>
 
-        <!--<constant name="ECalBarrel_inner_radius" value="2150*mm"/-->
-        <constant name="ECalBarrel_inner_radius" value="2100*mm"/>
+        <constant name="ECalBarrel_inner_radius" value="2150*mm"/>
+        <!--constant name="ECalBarrel_inner_radius" value="2100*mm"/-->
         <!--constant name="ECalBarrel_outer_radius" value="2352*mm"/-->
         <constant name="ECalBarrel_outer_radius" value="2770*mm"/>
-        <!--<constant name="ECalBarrel_half_length" value="2210*mm"/>-->
-        <constant name="ECalBarrel_half_length" value="1550*mm"/>
+        <constant name="ECalBarrel_half_length" value="2210*mm"/>
+        <!--constant name="ECalBarrel_half_length" value="1550*mm"/-->
         <constant name="ECalBarrel_symmetry" value="12"/>
 
         <constant name="ECalEndcap_inner_radius" value="340*mm"/>
-        <constant name="ECalEndcap_outer_radius" value="2455*mm"/>
+        <!--constant name="ECalEndcap_outer_radius" value="2455*mm"/-->
+	<constant name="ECalEndcap_outer_radius" value="2770*mm"/>
         <constant name="ECalEndcap_min_z" value="2307*mm"/>
         <constant name="ECalEndcap_max_z" value="2509*mm"/>
         <constant name="ECalEndcap_outer_symmetry" value="12"/>
@@ -153,36 +154,45 @@
         <constant name="HCalBarrel_half_length" value="2210*mm"/-->
         <constant name="HCalBarrel_inner_radius" value="2800*mm"/>
         <constant name="HCalBarrel_outer_radius" value="3966*mm"/>
-        <constant name="HCalBarrel_half_length" value="1550*mm"/>
+        <!--constant name="HCalBarrel_half_length" value="1550*mm"/-->
+	<constant name="HCalBarrel_half_length" value="2210*mm"/>
         <constant name="HCalBarrel_symmetry" value="12"/>
 
         <constant name="HCalEndcap_inner_radius" value="340*mm"/>
-        <constant name="HCalEndcap_outer_radius" value="3566*mm"/>
+        <!--constant name="HCalEndcap_outer_radius" value="3566*mm"/-->
+	<constant name="HCalEndcap_outer_radius" value="3966*mm"/>
         <constant name="HCalEndcap_min_z" value="2539*mm"/>
         <constant name="HCalEndcap_max_z" value="3705*mm"/>
         <constant name="HCalEndcap_symmetry" value="12"/>
         <constant name="HCalEndcap_zcutout" value="200*mm"/>
         <constant name="HCalEndcap_rcutout" value="0*mm"/>
 
-        <constant name="HCalRing_inner_radius" value="2475*mm"/>
+        <!--constant name="HCalRing_inner_radius" value="2475*mm"/-->
+	<constant name="HCalRing_inner_radius" value="2800*mm"/>
         <constant name="HCalRing_outer_radius" value="HCalEndcap_outer_radius"/>
         <constant name="HCalRing_min_z" value="2353.5*mm"/>
         <constant name="HCalRing_max_z" value="HCalEndcap_min_z"/>
         <constant name="HCalRing_symmetry" value="12"/>
 
-        <constant name="Solenoid_inner_radius" value="3719*mm"/>
-        <constant name="Solenoid_outer_radius" value="4272*mm"/>
+        <!--constant name="Solenoid_inner_radius" value="3719*mm"/-->
+	<constant name="Solenoid_inner_radius" value="4119*mm"/>
+        <!--constant name="Solenoid_outer_radius" value="4272*mm"/-->
+	<constant name="Solenoid_outer_radius" value="4672*mm"/>
         <constant name="Solenoid_half_length" value="3705*mm"/>
         <constant name="Solenoid_Coil_half_length" value="3476*mm"/>
-        <constant name="Solenoid_Coil_radius" value="3930*mm"/>
+        <!--constant name="Solenoid_Coil_radius" value="3930*mm"/-->
+	<constant name="Solenoid_Coil_radius" value="4330*mm"/>
 
-        <constant name="YokeBarrel_inner_radius" value="4479*mm"/>
-        <constant name="YokeBarrel_outer_radius" value="6000*mm"/>
+        <!--constant name="YokeBarrel_inner_radius" value="4479*mm"/-->
+	<constant name="YokeBarrel_inner_radius" value="4879*mm"/>
+        <!--constant name="YokeBarrel_outer_radius" value="6000*mm"/-->
+	<constant name="YokeBarrel_outer_radius" value="6400*mm"/>
         <constant name="YokeBarrel_half_length" value="3755*mm"/>
         <constant name="YokeBarrel_symmetry" value="12"/>
 
         <constant name="YokeEndcap_inner_radius" value="400*mm"/>
-        <constant name="YokeEndcap_outer_radius" value="6000*mm"/>
+        <!--constant name="YokeEndcap_outer_radius" value="6000*mm"/-->
+	<constant name="YokeEndcap_outer_radius" value="6400*mm"/>
         <constant name="YokeEndcap_min_z" value="3755*mm"/>
         <constant name="YokeEndcap_max_z" value="5300*mm"/>
         <constant name="YokeEndcap_outer_symmetry" value="12"/>
@@ -307,58 +317,58 @@
     <plugins>
       <plugin name="DD4hepVolumeManager"/>
       <plugin name="InstallSurfaceManager"/>
-      <plugin name="lcgeo_LinearSortingPolicy">
+      <!-- <plugin name="lcgeo_LinearSortingPolicy"> -->
 
-        <argument value="/InnerTrackerEndcapSupport_layer8" />
-        <argument value="InnerTracker_Barrel_half_length_0" />
-        <argument value="InnerTracker_Barrel_radius_0+0.5*mm" />
-        <argument value="0" />
+      <!--   <argument value="/InnerTrackerEndcapSupport_layer8" /> -->
+      <!--   <argument value="InnerTracker_Barrel_half_length_0" /> -->
+      <!--   <argument value="InnerTracker_Barrel_radius_0+0.5*mm" /> -->
+      <!--   <argument value="0" /> -->
 
-        <argument value="/InnerTrackerEndcapSupport_layer9" />
-        <argument value="InnerTracker_Barrel_half_length_0" />
-        <argument value="InnerTracker_Barrel_radius_1+0.5*mm" />
-        <argument value="0" />
+      <!--   <argument value="/InnerTrackerEndcapSupport_layer9" /> -->
+      <!--   <argument value="InnerTracker_Barrel_half_length_0" /> -->
+      <!--   <argument value="InnerTracker_Barrel_radius_1+0.5*mm" /> -->
+      <!--   <argument value="0" /> -->
 
-        <argument value="/InnerTrackerEndcapSupport" />
-        <argument value="InnerTracker_Barrel_half_length_0" />
-        <argument value="InnerTracker_Barrel_radius_1+0.5*mm" />
-        <argument value="(InnerTracker_outer_radius-InnerTracker_Barrel_radius_1)/(InnerTracker_half_length-InnerTracker_Barrel_half_length_0)" />
+      <!--   <argument value="/InnerTrackerEndcapSupport" /> -->
+      <!--   <argument value="InnerTracker_Barrel_half_length_0" /> -->
+      <!--   <argument value="InnerTracker_Barrel_radius_1+0.5*mm" /> -->
+      <!--   <argument value="(InnerTracker_outer_radius-InnerTracker_Barrel_radius_1)/(InnerTracker_half_length-InnerTracker_Barrel_half_length_0)" /> -->
 
-        <argument value="/InnerTrackerEndcap/" />
-        <argument value="InnerTracker_Barrel_half_length_0" />
-        <argument value="InnerTracker_Barrel_radius_1" />
-        <argument value="(InnerTracker_outer_radius-InnerTracker_Barrel_radius_1)/(InnerTracker_half_length-InnerTracker_Barrel_half_length_0)" />
+      <!--   <argument value="/InnerTrackerEndcap/" /> -->
+      <!--   <argument value="InnerTracker_Barrel_half_length_0" /> -->
+      <!--   <argument value="InnerTracker_Barrel_radius_1" /> -->
+      <!--   <argument value="(InnerTracker_outer_radius-InnerTracker_Barrel_radius_1)/(InnerTracker_half_length-InnerTracker_Barrel_half_length_0)" /> -->
 
-        <argument value="/OuterTrackerEndcap/" />
-        <argument value="OuterTracker_Barrel_half_length" />
-        <argument value="OuterTracker_Barrel_radius_1" />
-        <argument value="(OuterTracker_Endcap_radius_2-OuterTracker_Barrel_radius_1)/(OuterTracker_half_length-OuterTracker_Barrel_half_length)" />
+      <!--   <argument value="/OuterTrackerEndcap/" /> -->
+      <!--   <argument value="OuterTracker_Barrel_half_length" /> -->
+      <!--   <argument value="OuterTracker_Barrel_radius_1" /> -->
+      <!--   <argument value="(OuterTracker_Endcap_radius_2-OuterTracker_Barrel_radius_1)/(OuterTracker_half_length-OuterTracker_Barrel_half_length)" /> -->
 
-        <argument value="/OuterTrackerEndcapSupport_layer4" />
-        <argument value="OuterTracker_Barrel_half_length" />
-        <argument value="OuterTracker_Barrel_radius_0+0.5*cm" />
-        <argument value="0.0" />
+      <!--   <argument value="/OuterTrackerEndcapSupport_layer4" /> -->
+      <!--   <argument value="OuterTracker_Barrel_half_length" /> -->
+      <!--   <argument value="OuterTracker_Barrel_radius_0+0.5*cm" /> -->
+      <!--   <argument value="0.0" /> -->
 
-        <argument value="/OuterTrackerEndcapSupport_layer5" />
-        <argument value="OuterTracker_Barrel_half_length" />
-        <argument value="OuterTracker_Barrel_radius_1+0.5*cm" />
-        <argument value="0.0" />
+      <!--   <argument value="/OuterTrackerEndcapSupport_layer5" /> -->
+      <!--   <argument value="OuterTracker_Barrel_half_length" /> -->
+      <!--   <argument value="OuterTracker_Barrel_radius_1+0.5*cm" /> -->
+      <!--   <argument value="0.0" /> -->
 
-        <argument value="/OuterTrackerEndcapSupport" />
-        <argument value="OuterTracker_Barrel_half_length" />
-        <argument value="OuterTracker_Barrel_radius_1+3*cm" />
-        <argument value="(OuterTracker_Endcap_radius_2-OuterTracker_Barrel_radius_1)/(OuterTracker_half_length-OuterTracker_Barrel_half_length)" />
+      <!--   <argument value="/OuterTrackerEndcapSupport" /> -->
+      <!--   <argument value="OuterTracker_Barrel_half_length" /> -->
+      <!--   <argument value="OuterTracker_Barrel_radius_1+3*cm" /> -->
+      <!--   <argument value="(OuterTracker_Endcap_radius_2-OuterTracker_Barrel_radius_1)/(OuterTracker_half_length-OuterTracker_Barrel_half_length)" /> -->
 
-        <argument value="/VertexEndcap/" />
-        <argument value="VertexEndcap_z1" />
-        <argument value="VertexBarrel_r3+1*cm" />
-        <argument value="(VertexEndcap_rmax-VertexBarrel_r3+1*cm)/(VertexEndcap_z3-VertexEndcap_z1)" />
+      <!--   <argument value="/VertexEndcap/" /> -->
+      <!--   <argument value="VertexEndcap_z1" /> -->
+      <!--   <argument value="VertexBarrel_r3+1*cm" /> -->
+      <!--   <argument value="(VertexEndcap_rmax-VertexBarrel_r3+1*cm)/(VertexEndcap_z3-VertexEndcap_z1)" /> -->
 
-        <argument value="/VertexVerticalCable" />
-        <argument value="0" />
-        <argument value="VertexBarrel_r3+0.5*cm" />
-        <argument value="0" />
-      </plugin>
+      <!--   <argument value="/VertexVerticalCable" /> -->
+      <!--   <argument value="0" /> -->
+      <!--   <argument value="VertexBarrel_r3+0.5*cm" /> -->
+      <!--   <argument value="0" /> -->
+      <!-- </plugin> -->
 
     </plugins>
 
