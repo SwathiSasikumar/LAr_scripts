@@ -1,7 +1,11 @@
-ddsim --compactFile $PWD/CLD_LAr/FCCee_o1_v05.xml \
+ddsim --compactFile /home/ksasikum/Key4Hep/LAr_scripts/pandoraPFA/CLD_LAr/FCCee_o1_v05.xml \
       --enableGun \
       --gun.distribution uniform \
       --gun.energy "10*GeV" \
-      --gun.particle e- \
-      --numberOfEvents 10 \
-      --outputFile Step1_edm4hep.root
+      --gun.particle pi+ \
+      --numberOfEvents 100 \
+      --gun.phiMin 0 \
+      --gun.phiMax 6.28 \
+      --gun.thetaMin 0 \
+      --gun.thetaMax 3.1415 \
+      --outputFile Step1_LAr_edm4hep.root

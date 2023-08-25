@@ -8,7 +8,7 @@
       <fraction n="0.2780" ref="C"/>
       <fraction n="0.0684" ref="H"/>
       <fraction n="0.0671" ref="Br"/>
-    </material>
+    </material> 
 
     <material name="LAr">
       <D value="1.396" unit="g/cm3" />
@@ -263,6 +263,16 @@
       <fraction n="0.36276" ref="N"/>
       <fraction n="0.117748421296248" ref="C"/>
       <fraction n="0.156851578703752" ref="O"/>
+    </material>
+
+    <material name="LAr">
+      <D value="1.396" unit="g/cm3" />
+      <composite n="1" ref="Ar"/>
+    </material>
+
+    <material name="LKr">
+      <D value="2.416" unit="g/cm3" />
+      <composite n="1" ref="Kr"/>
     </material>
 
 </materials>
